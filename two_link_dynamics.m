@@ -21,12 +21,12 @@ function dx_0 = two_link_dynamics(t, x_0)
  
     
     % Dynamics
-    D = [1+2*beta*(1-cos(x_0(2))) -beta*(1-cos(x_0(2)));
-        beta*(1-cos(x_0(2))) -beta];
-    Cdq = [-beta*sin(x_0(2))*(x_0(4)^2-2*x_0(3)*x_0(4));
-        beta*x_0(4)^2*sin(x_0(2))];
-    G = [(beta*g_div_l)*(sin(x_0(1)-x_0(2)-gamma)-sin(x_0(1)-gamma))-(g_div_l)*sin(x_0(1)-gamma);
-        beta*g_div_l*sin(x_0(1)-x_0(2)-gamma)];
+    D   =   [1+2*beta*(1-cos(x_0(2))) -beta*(1-cos(x_0(2)));
+            beta*(1-cos(x_0(2))) -beta];
+    Cdq =   [-beta*sin(x_0(2))*(x_0(4)^2-2*x_0(3)*x_0(4));
+            beta*x_0(4)^2*sin(x_0(2))];
+    G   =   [(beta*g_div_l)*(sin(x_0(1)-x_0(2)-gamma)-sin(x_0(1)-gamma))-(g_div_l)*sin(x_0(1)-gamma);
+            beta*g_div_l*sin(x_0(1)-x_0(2)-gamma)];
     
     
     % Initialize OUTPUT: time-derivative of the state
