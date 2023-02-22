@@ -27,7 +27,7 @@ function simulate_two_link_walker
     gamma = 0.01;
     options = odeset('Events', @two_link_event);
 
-    for step = 1:5
+    for step = 1:10
         
         [t_sol,x_sol] = ode45(@(t, x_0)two_link_dynamics(t, x_0),tspan,x_0,options);
  
